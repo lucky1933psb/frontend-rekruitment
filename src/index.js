@@ -12,6 +12,7 @@ import {
   RouterProvider,
   
 } from "react-router-dom";
+import FormSignUp from './container/SignUp.js/FormSignUp';
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
   {
     path: "/DetailLoker/:id",
     element: <DetailLoker />
+  },
+  {
+    path: "/FormSignUp",
+    element: <FormSignUp />
   },
   
 ]);

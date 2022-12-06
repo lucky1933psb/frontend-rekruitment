@@ -77,21 +77,15 @@ class Home extends Component{
 
         return(
             <div>
-
             <NavbarComp />
             <JumboComp />
             <InputLoker formEvent={this.handleFormChange} formdata={this.state.Loker} 
              data={this.state.Post}
              getdata={this.getPostAPI} isUpdate={this.state.isUpdate} reset={this.handleReset} /> 
             <Loker data={this.state.Post} getdata={this.getPostAPI}/>
-           
             <MonLoker data={this.state.Post} getdata={this.getPostAPI} updatedata={this.handleUpdate} />
             <Footer />
-            
-           
-            
-            </div>
-            
+            </div>  
         )
     }
 }

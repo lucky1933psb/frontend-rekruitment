@@ -1,16 +1,24 @@
 import React from "react";
-import {Nav,Navbar,Button,Container} from 'react-bootstrap'
+import { useNavigate } from "react-router-dom";
+import {Nav,Navbar,Button,Container} from 'react-bootstrap';
 
 function NavbarComp() {
+  const Navigate = useNavigate();
+  function masuk(){
+    Navigate("/Login")
+  }
+  function keluar(){
+    Navigate("/FormSignUp")
+  } 
     
         return(
-            <Navbar bg="light" expand="lg">
+            <Navbar bg="dark" variant="dark">
             <Container >
               <Navbar.Brand href="#">Inalah LOKER</Navbar.Brand>
               <Navbar.Toggle aria-controls="navbarScroll" />
               <Navbar.Collapse id="navbarScroll">
                 <Nav
-                  className="me-auto my-2 my-lg-0"
+                  className="justify-content-end flex-grow-1 pe-3 my-2 my-lg-0"
                   style={{ maxHeight: '100px' }}
                   navbarScroll
                 >
@@ -19,9 +27,10 @@ function NavbarComp() {
                   <Nav.Link href="#action2">ABOUT</Nav.Link>
                                
                 </Nav>
+
                
-                  <Button variant="outline-submit">Login</Button>
-                  <Button variant="outline-submit">Sign Up</Button>
+                  <Button onClick={masuk} className="me-2" variant="outline-success">Login</Button>
+                  <Button onClick={keluar} variant="outline-success">Sign Up</Button>
                   
                 
               </Navbar.Collapse>
